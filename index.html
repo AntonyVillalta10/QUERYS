@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoVentas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado con logotipo y menú de navegación -->
+    <header>
+        <div class="logo">
+            <img src="logo.avif" alt="Logotipo" class="logo-img">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección de Inicio -->
+    <section id="inicio">
+        <main>
+            <h1>Encuentra el Auto de Tus Sueños</h1>
+            <p>Explora nuestra amplia selección de autos nuevos y usados. Ofrecemos los mejores precios y financiamiento flexible para que puedas llevarte el auto que deseas.</p>
+        </main>
+    </section>
+
+    <!-- Sección Acerca de -->
+    <section id="acerca-de">
+        <h2>Acerca de Nosotros</h2>
+        <p>AutoVentas es una empresa líder en la industria automotriz, dedicada a ofrecer a nuestros clientes los mejores vehículos y un servicio excepcional.</p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos una amplia gama de servicios, incluyendo financiamiento, garantías extendidas, y mucho más.</p>
+    </section>
+
+    <!-- Sección con tarjetas de autos -->
+    <section class="content-cards">
+        <!-- Mitsubishi Montero Sport 2022 -->
+        <div class="card">
+            <img src="montero.jpg" alt="Mitsubishi Montero Sport 2022" class="card-img">
+            <h2>Mitsubishi Montero Sport 2022</h2>
+            <p>Un SUV todoterreno con excelente rendimiento y capacidad, ideal para aventuras extremas y conducción urbana.</p>
+            <button onclick="openModal('montero-modal')">Más Detalles</button>
+        </div>
+
+        <!-- Toyota Corolla 2016 -->
+        <div class="card">
+            <img src="corolla.jpeg" alt="Toyota Corolla 2016" class="card-img">
+            <h2>Toyota Corolla 2016</h2>
+            <p>Confiabilidad y eficiencia, ideal para el uso diario con un bajo consumo de combustible.</p>
+            <button onclick="openModal('corolla-modal')">Más Detalles</button>
+        </div>
+
+        <!-- Isuzu D-Max 2024 -->
+        <div class="card">
+            <img src="isuzu.jpg" alt="Isuzu D-Max 2024" class="card-img">
+            <h2>Isuzu D-Max 2024</h2>
+            <p>Una camioneta robusta y versátil, perfecta para trabajos duros y también para el día a día.</p>
+            <button onclick="openModal('dmax-modal')">Más Detalles</button>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Puedes encontrarnos en nuestras redes sociales:</p>
+        <ul class="social-links">
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank">X</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+        <p>O envíanos un correo a <a href="mailto:contacto@autoventas.com">contacto@autoventas.com</a>.</p>
+    </section>
+
+    <!-- Modal Mitsubishi Montero Sport 2022 -->
+    <div id="montero-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('montero-modal')">&times;</span>
+            <h2>Mitsubishi Montero Sport 2022</h2>
+            <img src="montero1.jpeg" alt="Mitsubishi Montero Sport - Imagen 1">
+            <img src="montero2.jpeg" alt="Mitsubishi Montero Sport - Imagen 2">
+            <ul>
+                <li><strong>Airbags:</strong> 6 airbags (frontales, laterales y de cortina).</li>
+                <li><strong>Motor:</strong> V6 de 3.0 litros.</li>
+                <li><strong>País de Ensamblaje:</strong> Tailandia.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Toyota Corolla 2016 -->
+    <div id="corolla-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('corolla-modal')">&times;</span>
+            <h2>Toyota Corolla 2016</h2>
+            <img src="corolla1.jpeg" alt="Toyota Corolla - Imagen 1">
+            <img src="corolla2.jpeg" alt="Toyota Corolla - Imagen 2">
+            <ul>
+                <li><strong>Airbags:</strong> 8 airbags (frontales, laterales y de cortina).</li>
+                <li><strong>Motor:</strong> 1.8 litros de 4 cilindros.</li>
+                <li><strong>País de Ensamblaje:</strong> Japón.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Isuzu D-Max 2024 -->
+    <div id="dmax-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('dmax-modal')">&times;</span>
+            <h2>Isuzu D-Max 2024</h2>
+            <img src="isuzu1.jpeg" alt="Isuzu D-Max - Imagen 1">
+            <img src="isuzu2.webp" alt="Isuzu D-Max - Imagen 2">
+            <ul>
+                <li><strong>Airbags:</strong> 4 airbags (frontales y laterales).</li>
+                <li><strong>Motor:</strong> 4 cilindros de 3.0 litros.</li>
+                <li><strong>País de Ensamblaje:</strong> Tailandia.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts para controlar los modales -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
